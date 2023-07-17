@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
 
     public int playerScore;
     public Text score;
+    public GameObject gameOverScreen;
     
 
     /*private void Start()
@@ -18,5 +20,15 @@ public class LogicScript : MonoBehaviour
     {
         playerScore = playerScore + scoreToAdd;
         score.text = playerScore.ToString();
+    }
+
+    public void restartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void gameOver()
+    {
+        gameOverScreen.SetActive(true);
     }
 }
