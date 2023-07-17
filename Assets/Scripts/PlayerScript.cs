@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) || (Input.GetMouseButton(0)) == true)
         {
-            rb.velocity = Vector3.up * force;
+            rb.velocity = Vector2.up * force;
 
         }
     }
