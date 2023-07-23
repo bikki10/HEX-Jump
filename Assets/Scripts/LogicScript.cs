@@ -31,4 +31,10 @@ public class LogicScript : MonoBehaviour
     {
         gameOverScreen.SetActive(true);
     }
+
+    public void exitButton(){
+        Application.Quit();
+        Debug.Log("Quit Button Pressed!");
+    }
+
 }
