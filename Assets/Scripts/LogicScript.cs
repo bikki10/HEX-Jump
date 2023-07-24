@@ -1,19 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LogicScript : MonoBehaviour
 {
-
+    public TextMeshProUGUI textMeshPro;
     public int playerScore;
     public Text score;
     public GameObject gameOverScreen;
     
+    
 
-    /*private void Start()
+    public void Start()
     {
-        textMeshPro = GetComponent<TextMeshProUGUI>();
-    }*/
+        //textMeshPro = GetComponent<TextMeshProUGUI>();
+        
+    }
 
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
@@ -29,12 +32,18 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
+
         gameOverScreen.SetActive(true);
     }
 
     public void exitButton(){
         Application.Quit();
         Debug.Log("Quit Button Pressed!");
+    }
+
+    public void DisplayText()
+    {
+        textMeshPro.gameObject.SetActive(false);
     }
 
 }
